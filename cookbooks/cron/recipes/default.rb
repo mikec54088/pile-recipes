@@ -22,7 +22,7 @@ if (['solo'].include?(node[:instance_role])) || (node[:name] && node[:name].incl
 	  cron "proc_servers sweep" do
 	    action  :create
 	    minute  "0"
-	    hour    '3'
+	    hour    '0,6,12,18'
 	    day     '*'
 	    month   '*'
 	    weekday '*'
